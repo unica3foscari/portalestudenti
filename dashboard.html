@@ -3,51 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area Riservata Studente</title>
+    <meta name="description" content="Area Riservata Studente - Università Ca' Foscari Venezia">
+    <meta name="author" content="Università Ca' Foscari Venezia">
+    <title>Area Riservata Studente - Università Ca' Foscari Venezia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --cafoscari-red: #A6192E; /* Rosso veneziano */
+            --cafoscari-light-red: #F8E8EC; /* Sfondo chiaro con sfumatura rossa */
+            --cafoscari-gold: #D4A017; /* Oro per accenti */
+            --cafoscari-white: #FFFFFF;
+            --cafoscari-grey: #4A4A4A;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--cafoscari-light-red);
+            color: var(--cafoscari-grey);
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background-color: var(--cafoscari-red);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--cafoscari-white);
+        }
+
+        .logout-btn {
+            color: var(--cafoscari-gold);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--cafoscari-gold);
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: var(--cafoscari-gold);
+            color: var(--cafoscari-red);
+        }
+
+        .dashboard-page {
+            padding: 2rem 0;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--cafoscari-white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: 'Titillium Web', sans-serif;
+            color: var(--cafoscari-red);
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        ul li a {
+            color: var(--cafoscari-red);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        ul li a:hover {
+            color: var(--cafoscari-gold);
+            text-decoration: underline;
+        }
+
+        .main-footer {
+            background-color: var(--cafoscari-red);
+            color: var(--cafoscari-white);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="dashboard.html"><img src="logo.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo"></a>
-            <div class="user-info">
-                <span>Benvenuto, lorenzosegale</span>
-                <a href="index.html" class="logout-btn">Logout</a>
-            </div>
+            <a href="dashboard.html" aria-label="Torna alla Dashboard">
+                <img src="logo_cafoscari.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo">
+            </a>
+            <nav class="user-info" aria-label="Informazioni utente">
+                <span>Benvenuto, Lorenzo Segale</span>
+                <a href="index.html" class="logout-btn" aria-label="Esci dall'area riservata">Logout</a>
+            </nav>
         </div>
     </header>
     <main>
         <div class="container dashboard-page">
             <div class="dashboard-grid">
-                <div class="card">
-                    <h2>Piano di studio</h2>
+                <section class="card" aria-label="Opzioni piano di studio">
+                    <h2>Piano di Studio</h2>
                     <ul>
-                        <li><a href="piano_studio.html">Piano di studio - S3</a></li>
-                        <li><a href="placeholder.html">Scelta curriculum - S3</a></li>
-                        <li><a href="placeholder.html">Scelta orientamento - S3</a></li>
-                        <li><a href="placeholder.html">Scelta lingua - S3</a></li>
+                        <li><a href="piano_studio.html">Piano di Studio - S3</a></li>
+                        <li><a href="placeholder.html">Scelta Curriculum - S3</a></li>
+                        <li><a href="placeholder.html">Scelta Orientamento - S3</a></li>
+                        <li><a href="placeholder.html">Scelta Lingua - S3</a></li>
                     </ul>
-                </div>
-                <div class="card">
-                    <h2>Esami e libretto</h2>
+                </section>
+                <section class="card" aria-label="Opzioni esami e libretto">
+                    <h2>Esami e Libretto</h2>
                     <ul>
                         <li><a href="libretto.html">Libretto - S3</a></li>
-                        <li><a href="iscrizione_appelli.html">Iscrizione agli appelli - S3</a></li>
-                        <li><a href="placeholder.html">Periodi di iscrizione agli appelli - S3</a></li>
-                        <li><a href="placeholder.html">Prove parziali - S3</a></li>
-                        <li><a href="placeholder.html">Bacheca esiti - S3</a></li>
-                        <li><a href="placeholder.html">Bacheca prenotazioni - S3</a></li>
+                        <li><a href="iscrizione_appelli.html">Iscrizione agli Appelli - S3</a></li>
+                        <li><a href="placeholder.html">Periodi di Iscrizione agli Appelli - S3</a></li>
+                        <li><a href="placeholder.html">Prove Parziali - S3</a></li>
+                        <li><a href="placeholder.html">Bacheca Esiti - S3</a></li>
+                        <li><a href="placeholder.html">Bacheca Prenotazioni - S3</a></li>
                     </ul>
-                </div>
+                </section>
             </div>
         </div>
     </main>
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2024 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia</p>
+            <p>&copy; 2025 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia, Italia</p>
         </div>
     </footer>
 </body>
