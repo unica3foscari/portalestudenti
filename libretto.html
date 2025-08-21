@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libretto Online - Area Riservata</title>
+    <title>Libretto Ufficiale - Area Riservata</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
@@ -12,68 +12,95 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="dashboard.html">
-                <img src="logo.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo">
-            </a>
+            <a href="dashboard.html"><img src="logo.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo"></a>
             <div class="user-info">
                 <span>Benvenuto, lorenzosegale</span>
                 <a href="index.html" class="logout-btn">Logout</a>
             </div>
         </div>
     </header>
-
     <main>
         <div class="container content-page">
             <a href="dashboard.html" class="back-link">&larr; Torna alla Dashboard</a>
-            <h1>Libretto Online</h1>
-            
-            <div class="libretto-container card">
-                <!-- Esami e voti dall'immagine -->
-                <div class="exam-row">
-                    <span class="exam-name">INFORMATICA - MODULO 1</span>
-                    <span class="exam-grade">29</span>
-                </div>
-                <div class="exam-row">
-                    <span class="exam-name">ANALISI MATEMATICA 1</span>
-                    <span class="exam-grade">28</span>
-                </div>
-                <div class="exam-row">
-                    <span class="exam-name">ANALISI MATEMATICA 2</span>
-                    <span class="exam-grade">28</span>
-                </div>
-                <div class="exam-row">
-                    <span class="exam-name">ALGEBRA LINEARE</span>
-                    <span class="exam-grade passed">30</span>
-                </div>
-                <div class="exam-row">
-                    <span class="exam-name">CHIMICA</span>
-                    <span class="exam-grade">28</span>
-                </div>
-                <div class="exam-row">
-                    <span class="exam-name">FISICA</span>
-                    <span class="exam-grade passed">30</span>
-                </div>
-                <div class="exam-row">
-                    <span class="exam-name">INFORMATICA MOD.2</span>
-                    <span class="exam-grade">28</span>
-                </div>
+            <h1>Libretto Ufficiale</h1>
+            <div class="card">
+                <table class="content-table libretto-table">
+                    <thead>
+                        <tr>
+                            <th>Attività Didattica</th>
+                            <th>CFU</th>
+                            <th>Data</th>
+                            <th>Voto</th>
+                            <th>Stato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INFORMATICA - MODULO 1</td>
+                            <td>6</td>
+                            <td>15/02/2024</td>
+                            <td class="voto-superato">29</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>ANALISI MATEMATICA 1</td>
+                            <td>12</td>
+                            <td>28/02/2024</td>
+                            <td class="voto-superato">28</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>ALGEBRA LINEARE</td>
+                            <td>9</td>
+                            <td>10/06/2024</td>
+                            <td class="voto-lode">30 e Lode</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                         <tr>
+                            <td>CHIMICA</td>
+                            <td>9</td>
+                            <td>25/06/2024</td>
+                            <td class="voto-superato">28</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>ANALISI MATEMATICA 2</td>
+                            <td>9</td>
+                            <td>12/07/2024</td>
+                            <td class="voto-superato">28</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>FISICA</td>
+                            <td>9</td>
+                            <td>20/07/2024</td>
+                            <td class="voto-superato">30</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>INFORMATICA MOD.2</td>
+                            <td>6</td>
+                            <td>05/09/2024</td>
+                            <td class="voto-superato">28</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
             <div class="summary-stats card">
-                <h2>Statistiche Carriera</h2>
+                <h2>Riepilogo Carriera</h2>
                 <div class="stats-grid">
-                    <div><span>Media Aritmetica:</span> <strong>28.71</strong></div>
-                    <div><span>Media Ponderata:</span> <strong>28.85</strong></div>
-                    <div><span>CFU Conseguiti:</span> <strong>60 / 180</strong></div>
-                    <div><span>Base di Laurea:</span> <strong>105.78 / 110</strong></div>
+                    <div><span>Media Aritmetica:</span> <strong>28.86</strong></div>
+                    <div><span>Media Ponderata:</span> <strong>28.75</strong></div>
+                    <div><span>CFU Riconosciuti:</span> <strong>60 / 180</strong></div>
+                    <div><span>Proiezione Laurea:</span> <strong>105.42 / 110</strong></div>
                 </div>
             </div>
         </div>
     </main>
-
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2023 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia</p>
+            <p>&copy; 2024 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia</p>
         </div>
     </footer>
 </body>
