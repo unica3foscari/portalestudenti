@@ -3,52 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piano di Studio - Area Riservata</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Piano di Studio - Area Riservata Studenti - Università Ca' Foscari Venezia">
+    <meta name="author" content="Università Ca' Foscari Venezia">
+    <title>Piano di Studio - Università Ca' Foscari Venezia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cafoscari-red: #A6192E; /* Rosso veneziano */
+            --cafoscari-light-red: #F8E8EC; /* Sfondo chiaro con sfumatura rossa */
+            --cafoscari-gold: #D4A017; /* Oro per accenti */
+            --cafoscari-white: #FFFFFF;
+            --cafoscari-grey: #4A4A4A;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--cafoscari-light-red);
+            color: var(--cafoscari-grey);
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background-color: var(--cafoscari-red);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--cafoscari-white);
+        }
+
+        .logout-btn {
+            color: var(--cafoscari-gold);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--cafoscari-gold);
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: var(--cafoscari-gold);
+            color: var(--cafoscari-red);
+        }
+
+        .content-page {
+            padding: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--cafoscari-red);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            font-family: 'Titillium Web', sans-serif;
+            color: var(--cafoscari-red);
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background-color: var(--cafoscari-white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        .content-table th,
+        .content-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--cafoscari-light-red);
+        }
+
+        .content-table th {
+            background-color: var(--cafoscari-red);
+            color: var(--cafoscari-white);
+            font-weight: 700;
+        }
+
+        .status-ok {
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        .status-pending {
+            color: var(--cafoscari-grey);
+            font-weight: 500;
+        }
+
+        .info-section {
+            margin-bottom: 2rem;
+            background-color: var(--cafoscari-light-red);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .info-section p {
+            margin: 0.5rem 0;
+        }
+
+        .info-section strong {
+            color: var(--cafoscari-red);
+        }
+
+        .main-footer {
+            background-color: var(--cafoscari-red);
+            color: var(--cafoscari-white);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="dashboard.html"><img src="logo.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo"></a>
-            <div class="user-info"><span>Benvenuto, lorenzosegale</span><a href="index.html" class="logout-btn">Logout</a></div>
+            <a href="dashboard.html" aria-label="Torna alla Dashboard">
+                <img src="logocafoscari.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo">
+            </a>
+            <nav class="user-info" aria-label="Informazioni utente">
+                <span>Benvenuto, Lorenzo Segale</span>
+                <a href="index.html" class="logout-btn" aria-label="Esci dall'area riservata">Logout</a>
+            </nav>
         </div>
     </header>
-
     <main>
         <div class="container content-page">
-            <a href="dashboard.html" class="back-link">&larr; Torna alla Dashboard</a>
+            <nav aria-label="Navigazione di ritorno">
+                <a href="dashboard.html" class="back-link">&larr; Torna alla Dashboard</a>
+            </nav>
             <h1>Piano di Studio</h1>
             <h2>Corso di Laurea: Ingegneria Fisica - A.A. 2024/2025</h2>
-
-            <div class="card">
+            <section class="info-section" aria-label="Informazioni sul piano di studio">
+                <p><strong>Matricola:</strong> 123456</p>
+                <p><strong>CFU Totali Conseguuti:</strong> 60 / 180</p>
+                <p><strong>Stato del Piano di Studio:</strong> Approvato il 15/10/2024</p>
+                <p><strong>Note:</strong> Contatta la segreteria didattica per modifiche al piano entro il 30/11/2025.</p>
+            </section>
+            <section class="card" aria-label="Elenco insegnamenti del piano di studio">
                 <table class="content-table">
+                    <caption class="sr-only">Elenco insegnamenti registrati</caption>
                     <thead>
                         <tr>
-                            <th>Insegnamento</th>
-                            <th>Anno</th>
-                            <th>CFU</th>
-                            <th>Stato</th>
+                            <th scope="col">Insegnamento</th>
+                            <th scope="col">Anno</th>
+                            <th scope="col">CFU</th>
+                            <th scope="col">Stato</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>ANALISI MATEMATICA 1</td><td>1</td><td>12</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>ALGEBRA LINEARE</td><td>1</td><td>9</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>CHIMICA</td><td>1</td><td>9</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>INFORMATICA - MODULO 1</td><td>1</td><td>6</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>ANALISI MATEMATICA 2</td><td>1</td><td>9</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>FISICA</td><td>1</td><td>9</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>INFORMATICA MOD.2</td><td>1</td><td>6</td><td class="status-ok">Superato</td></tr>
-                        <tr><td>STATISTICA</td><td>2</td><td>9</td><td class="status-pending">Da sostenere</td></tr>
-            
+                        <tr>
+                            <td>Analisi Matematica 1</td>
+                            <td>1</td>
+                            <td>12</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Algebra Lineare</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Chimica</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Ingegneria del Software - Modulo 1</td>
+                            <td>1</td>
+                            <td>6</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Analisi Matematica 2</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Fisica</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Ingegneria del Software - Modulo 2</td>
+                            <td>1</td>
+                            <td>6</td>
+                            <td class="status-ok">Superato</td>
+                        </tr>
+                        <tr>
+                            <td>Statistica</td>
+                            <td>2</td>
+                            <td>9</td>
+                            <td class="status-pending">Da sostenere</td>
+                        </tr>
                     </tbody>
                 </table>
-            </div>
+            </section>
         </div>
     </main>
-
-    <footer class="main-footer"><div class="container"><p>&copy; 2023 Università Ca' Foscari Venezia</p></div></footer>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia, Italia</p>
+        </div>
+    </footer>
 </body>
 </html>
