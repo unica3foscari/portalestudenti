@@ -3,24 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accesso Area Riservata - Università Ca' Foscari Venezia">
+    <meta name="author" content="Università Ca' Foscari Venezia">
     <title>Accesso - Università Ca' Foscari Venezia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --cafoscari-red: #A6192E; /* Rosso veneziano */
+            --cafoscari-light-red: #F8E8EC; /* Sfondo chiaro con sfumatura rossa */
+            --cafoscari-gold: #D4A017; /* Oro per accenti */
+            --cafoscari-white: #FFFFFF;
+            --cafoscari-grey: #4A4A4A;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--cafoscari-light-red);
+            color: var(--cafoscari-grey);
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background-color: var(--cafoscari-red);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        .login-page {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 200px);
+        }
+
+        .login-form-container {
+            background-color: var(--cafoscari-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Titillium Web', sans-serif;
+            color: var(--cafoscari-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            color: var(--cafoscari-grey);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: var(--cafoscari-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--cafoscari-light-red);
+            border-radius: 4px;
+            font-size: 1rem;
+            color: var(--cafoscari-grey);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--cafoscari-red);
+            box-shadow: 0 0 5px rgba(166, 25, 46, 0.3);
+        }
+
+        button[type="submit"] {
+            background-color: var(--cafoscari-red);
+            color: var(--cafoscari-white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--cafoscari-gold);
+            color: var(--cafoscari-red);
+        }
+
+        .error-message {
+            color: var(--cafoscari-red);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .login-links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login-links a {
+            color: var(--cafoscari-red);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .login-links a:hover {
+            color: var(--cafoscari-gold);
+            text-decoration: underline;
+        }
+
+        .main-footer {
+            background-color: var(--cafoscari-red);
+            color: var(--cafoscari-white);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="#">
-                <img src="logo.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo">
+            <a href="#" aria-label="Home Università Ca' Foscari Venezia">
+                <img src="logocafoscari.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo">
             </a>
         </div>
     </header>
     <main>
         <div class="container login-page">
             <div class="login-form-container">
-                <img src="logo.png" alt="Logo Università Ca' Foscari Venezia" class="login-logo">
                 <h1>Accesso Area Riservata</h1>
                 <p class="login-subtitle">Accedi con le tue credenziali di Ateneo.</p>
                 <form id="login-form">
@@ -44,7 +194,7 @@
     </main>
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2024 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia</p>
+            <p>&copy; 2025 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia, Italia</p>
         </div>
     </footer>
     <script src="script.js"></script>
