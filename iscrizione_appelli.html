@@ -16,13 +16,11 @@
             <div class="user-info"><span>Benvenuto, lorenzosegale</span><a href="index.html" class="logout-btn">Logout</a></div>
         </div>
     </header>
-
     <main>
         <div class="container content-page">
             <a href="dashboard.html" class="back-link">&larr; Torna alla Dashboard</a>
             <h1>Iscrizione Appelli</h1>
-            <h2>Appelli disponibili per l'iscrizione</h2>
-
+            <h2>Appelli disponibili alla prenotazione</h2>
             <div class="card">
                 <table class="content-table">
                     <thead>
@@ -36,19 +34,19 @@
                     <tbody>
                         <tr>
                             <td>ECONOMIA E ORGANIZZAZIONE AZIENDALE</td>
-                            <td>15/01/2024</td>
+                            <td>15/01/2025</td>
                             <td>Rossi M.</td>
-                            <td><button class="btn btn-primary" onclick="alert('Iscrizione non disponibile in questa demo.')">Iscriviti</button></td>
+                            <td><button class="btn btn-primary" onclick="iscrivi(this)">Iscriviti</button></td>
                         </tr>
                         <tr>
                             <td>ELETTROTECNICA</td>
-                            <td>22/01/2024</td>
+                            <td>22/01/2025</td>
                             <td>Bianchi F.</td>
-                            <td><button class="btn btn-primary" onclick="alert('Iscrizione non disponibile in questa demo.')">Iscriviti</button></td>
+                            <td><button class="btn btn-primary" onclick="iscrivi(this)">Iscriviti</button></td>
                         </tr>
                          <tr>
                             <td>LINGUA INGLESE B2</td>
-                            <td>01/02/2024</td>
+                            <td>01/02/2025</td>
                             <td>Smith J.</td>
                             <td><button class="btn btn-secondary" disabled>Iscritto</button></td>
                         </tr>
@@ -57,7 +55,7 @@
             </div>
         </div>
     </main>
-
-    <footer class="main-footer"><div class="container"><p>&copy; 2023 Università Ca' Foscari Venezia</p></div></footer>
+    <footer class="main-footer"><div class="container"><p>&copy; 2024 Università Ca' Foscari Venezia</p></div></footer>
+    <script src="script.js"></script>
 </body>
 </html>
