@@ -3,37 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Studente</title>
+    <title>Area Riservata Studente</title>
+    <!-- Importazione Font Ufficiali -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Link al nostro foglio di stile -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="main-header">
-        <h1>Benvenuto, Lorenzosegale</h1>
-        <!-- Potresti aggiungere qui altri elementi come un menu di navigazione o un pulsante di logout -->
+        <div class="container">
+            <a href="#">
+                 <img src="https://upload.wikimedia.org/wikipedia/it/thumb/3/37/Logo_dell%27Universit%C3%A0_Ca%27_Foscari_Venezia.svg/800px-Logo_dell%27Universit%C3%A0_Ca%27_Foscari_Venezia.svg.png" alt="Logo Università Ca' Foscari Venezia" class="header-logo">
+            </a>
+            <div class="user-info">
+                <span>Benvenuto, lorenzosegale</span>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
     </header>
 
-    <main class="dashboard-container">
-        <div class="card">
-            <h2>Piano di studio</h2>
-            <ul>
-                <li><a href="#">Piano di studio - S3</a></li>
-                <li><a href="#">Scelta curriculum - S3</a></li>
-                <li><a href="#">Scelta orientamento - S3</a></li>
-                <li><a href="#">Scelta lingua - S3</a></li>
-            </ul>
-        </div>
+    <main>
+        <div class="container dashboard-page">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h2>Piano di studio</h2>
+                    <ul>
+                        <li><a href="#">Piano di studio - S3</a></li>
+                        <li><a href="#">Scelta curriculum - S3</a></li>
+                        <li><a href="#">Scelta orientamento - S3</a></li>
+                        <li><a href="#">Scelta lingua - S3</a></li>
+                    </ul>
+                </div>
 
-        <div class="card">
-            <h2>Esami e libretto</h2>
-            <ul>
-                <li><a href="#">Libretto - S3</a></li>
-                <li><a href="#">Iscrizione agli appelli - S3</a></li>
-                <li><a href="#">Periodi di iscrizione agli appelli - S3</a></li>
-                <li><a href="#">Prove parziali - S3</a></li>
-                <li><a href="#">Bacheca esiti - S3</a></li>
-                <li><a href="#">Bacheca prenotazioni - S3</a></li>
-            </ul>
+                <div class="card">
+                    <h2>Esami e libretto</h2>
+                    <ul>
+                        <li><a href="#">Libretto - S3</a></li>
+                        <li><a href="#">Iscrizione agli appelli - S3</a></li>
+                        <li><a href="#">Periodi di iscrizione agli appelli - S3</a></li>
+                        <li><a href="#">Prove parziali - S3</a></li>
+                        <li><a href="#">Bacheca esiti - S3</a></li>
+                        <li><a href="#">Bacheca prenotazioni - S3</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Università Ca' Foscari Venezia - Dorsoduro 3246, 30123 Venezia</p>
+        </div>
+    </footer>
+
 </body>
 </html>
